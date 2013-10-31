@@ -26,7 +26,7 @@ public class MainWindow extends JFrame {
         textField.setEditable(false);
         textField.setBackground(Color.white);
         c.insets = new Insets(12, 12, 12, 12);
-        c.gridwidth = 10;
+        c.gridwidth = 11;
         cp.add(textField, c);
         data.addListener(new Runnable() {
             @Override
@@ -42,14 +42,17 @@ public class MainWindow extends JFrame {
             }
         });
         c.gridwidth = 1;
-        for(int i = 0; i <= 10; i++) {
+        for(int i = 1; i <= 10; i++) {
             c.gridx = (i - 1) % 3;
-            c.gridy = 3 - ((i - 1) % 3);
+            c.gridy = 3 - ((i - 1) / 3);
             if (c.gridy == 0) {
                 c.gridy = 4;
             }
             String num;
             num = String.valueOf(i);
+            if (i == 10) {
+                num = String.valueOf(0);
+            }
             JButton button = new JButton(num);
             button.setBackground(Color.white);
             button.setForeground(Color.black);
@@ -65,8 +68,7 @@ public class MainWindow extends JFrame {
                     */
                 }
             });
-            c.gridy = 1;
-            c.insets = new Insets(5, 12, 12, 12); //window toolkit
+            c.insets = new Insets(12, 12, 12, 12); //window toolkit
             cp.add(button, c);
         }
 
