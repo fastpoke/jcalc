@@ -10,7 +10,7 @@ import static org.fastpoke.jcalc.Main.log;
 public class MainWindow extends JFrame {
 
     public MainWindow(final Data data) {
-        super("Fastpoke Calc");
+        super("jCalc");
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -19,11 +19,11 @@ public class MainWindow extends JFrame {
         GridBagConstraints c = new GridBagConstraints();
         c.anchor = GridBagConstraints.CENTER;
         c.fill = GridBagConstraints.BOTH;
-        c.weightx = c.weighty = 1.0;
+        c.weightx = c.weighty = 2.0;
 
         final JTextField textField = new JTextField();
         textField.setEditable(false);
-        c.insets = new Insets(12, 12, 2, 12);
+        c.insets = new Insets(12, 12, 12, 12);
         cp.add(textField, c);
         data.addListener(new Runnable() {
             @Override
@@ -32,26 +32,30 @@ public class MainWindow extends JFrame {
                 SwingUtilities.invokeLater(new Runnable() {
                     @Override
                     public void run() {
-                        log("setting text in EDT");
+                        log("setting text in EDT");  //EDT - Event Dispatch Thread
                         textField.setText(String.valueOf(data.getValue()));
                     }
                 });
             }
         });
 
-        JButton button = new JButton("Nyaa");
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                log("button clicked");
-                data.increment();
-            }
-        });
-        c.gridy = 1;
-        c.insets = new Insets(2, 12, 12, 12);
-        cp.add(button, c);
+        for(int i = 0; i < 10;  i++) {
+            String num;
+            num = String.valueOf(i);
+            JButton button = new JButton(num);
+            button.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    log("button clicked");
+                    data.increment();
+                }
+            });
+            c.gridy = 1;
+            c.insets = new Insets(2, 12, 12, 12); //AWT - window toolkit
+            cp.add(button, c);
+        }
 
-        pack(); //уплотнение элементов
+        pack();
     }
 
 }
