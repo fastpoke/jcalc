@@ -23,6 +23,8 @@ public class MainWindow extends JFrame {
 
         final JTextField textField = new JTextField();
         textField.setEditable(false);
+        textField.setBackground(Color.white);
+        textField.setSize(100, 10);
         c.insets = new Insets(12, 12, 12, 0);
         cp.add(textField, c);
         data.addListener(new Runnable() {
