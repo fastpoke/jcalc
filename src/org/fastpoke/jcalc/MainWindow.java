@@ -19,11 +19,11 @@ public class MainWindow extends JFrame {
         GridBagConstraints c = new GridBagConstraints();
         c.anchor = GridBagConstraints.CENTER;
         c.fill = GridBagConstraints.BOTH;
-        c.weightx = c.weighty = 2.0;
+        c.weightx = c.weighty = 1.0;
 
         final JTextField textField = new JTextField();
         textField.setEditable(false);
-        c.insets = new Insets(12, 12, 12, 12);
+        c.insets = new Insets(12, 12, 12, 0);
         cp.add(textField, c);
         data.addListener(new Runnable() {
             @Override
