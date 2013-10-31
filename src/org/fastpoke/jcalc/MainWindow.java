@@ -11,7 +11,7 @@ public class MainWindow extends JFrame {
 
     public MainWindow(final Data data) {
         super("jCalc");
-        setResizable(false);
+        setResizable(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         Container cp = getContentPane();
         cp.setLayout(new GridBagLayout());
@@ -42,12 +42,15 @@ public class MainWindow extends JFrame {
             }
         });
         c.gridwidth = 1;
-        for(int i = 0; i < 10;  i++) {
+        for(int i = 0; i <= 10; i++) {
+            c.gridx = (i - 1) % 3;
+            c.gridy = 3 - ((i - 1) % 3);
+            if (c.gridy == 0) {
+                c.gridy = 4;
+            }
             String num;
             num = String.valueOf(i);
             JButton button = new JButton(num);
-            //c.gridx = (i + 2);
-            //c.gridy = (i - 1);
             button.setBackground(Color.white);
             button.setForeground(Color.black);
             button.setSize(20, 20);
