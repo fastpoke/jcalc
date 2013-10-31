@@ -18,13 +18,12 @@ public class MainWindow extends JFrame {
         cp.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         c.anchor = GridBagConstraints.CENTER;
-        c.fill = GridBagConstraints.BOTH;
+        c.fill = GridBagConstraints.HORIZONTAL;
         c.weightx = c.weighty = 1.0;
 
         final JTextField textField = new JTextField();
         textField.setEditable(false);
         textField.setBackground(Color.white);
-        textField.setSize(100, 10);
         c.insets = new Insets(12, 12, 12, 0);
         cp.add(textField, c);
         data.addListener(new Runnable() {
@@ -34,7 +33,7 @@ public class MainWindow extends JFrame {
                 SwingUtilities.invokeLater(new Runnable() {
                     @Override
                     public void run() {
-                        log("setting text in EDT");  //EDT - Event Dispatch Thread
+                        log("setting text in EDT");  //Event Dispatch Thread
                         textField.setText(String.valueOf(data.getValue()));
                     }
                 });
@@ -45,15 +44,22 @@ public class MainWindow extends JFrame {
             String num;
             num = String.valueOf(i);
             JButton button = new JButton(num);
+            button.setBackground(Color.white);
+            button.setForeground(Color.black);
+            button.setSize(20, 20);
             button.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     log("button clicked");
                     data.increment();
+                    /*
+                    data.notifyAll();
+                    data.fireUpdateEvent();
+                    */
                 }
             });
             c.gridy = 1;
-            c.insets = new Insets(2, 12, 12, 12); //AWT - window toolkit
+            c.insets = new Insets(2, 12, 12, 12); //window toolkit
             cp.add(button, c);
         }
 
