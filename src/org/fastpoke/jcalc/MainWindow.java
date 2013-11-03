@@ -43,22 +43,11 @@ public class MainWindow extends JFrame {
         });
         c.gridwidth = 1;
 
-        //(x,y) coordinates ~ e.g. 2D-matrix [(1,1)(1,2)(1,3)],[(2,1)(2,2)(2,3)]...
         for(int i = 1; i <= 10; i++) {
             c.gridx = (i - 1) % 3;
-            c.gridy = 3 - ((i - 1) / 3);
+            c.gridy = 4 - ((i + 2) / 3) % 4;
 
-                if (c.gridy == 0) {
-                    c.gridy = 4;
-                }
-
-                String num;
-                num = String.valueOf(i);
-                //dirty hotfix >_<
-                if (i == 10) {
-                    num = String.valueOf(0);
-                }
-
+            String num = String.valueOf(i % 10);
             JButton button = new JButton(num);
             button.setBackground(Color.white);
             button.setForeground(Color.black);
