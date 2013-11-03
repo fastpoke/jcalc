@@ -10,8 +10,8 @@ import static org.fastpoke.jcalc.Main.log;
 public class MainWindow extends JFrame {
 
     public MainWindow(final Data data) {
-        super("jCalc");
-        setResizable(true);
+        super("jCalc v0.1.1");
+        setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         Container cp = getContentPane();
         cp.setLayout(new GridBagLayout());
@@ -25,8 +25,8 @@ public class MainWindow extends JFrame {
         final JTextField textField = new JTextField();
         textField.setEditable(false);
         textField.setBackground(Color.white);
-        c.insets = new Insets(12, 12, 12, 12);
-        c.gridwidth = 11;
+        c.insets = new Insets(16, 10, 8, 10);
+        c.gridwidth = 18;
         cp.add(textField, c);
         data.addListener(new Runnable() {
             @Override
@@ -42,17 +42,23 @@ public class MainWindow extends JFrame {
             }
         });
         c.gridwidth = 1;
+
+        //(x,y) coordinates ~ e.g. 2D-matrix [(1,1)(1,2)(1,3)],[(2,1)(2,2)(2,3)]...
         for(int i = 1; i <= 10; i++) {
             c.gridx = (i - 1) % 3;
             c.gridy = 3 - ((i - 1) / 3);
-            if (c.gridy == 0) {
-                c.gridy = 4;
-            }
-            String num;
-            num = String.valueOf(i);
-            if (i == 10) {
-                num = String.valueOf(0);
-            }
+
+                if (c.gridy == 0) {
+                    c.gridy = 4;
+                }
+
+                String num;
+                num = String.valueOf(i);
+                //dirty hotfix >_<
+                if (i == 10) {
+                    num = String.valueOf(0);
+                }
+
             JButton button = new JButton(num);
             button.setBackground(Color.white);
             button.setForeground(Color.black);
@@ -68,7 +74,7 @@ public class MainWindow extends JFrame {
                     */
                 }
             });
-            c.insets = new Insets(12, 12, 12, 12); //window toolkit
+            c.insets = new Insets(6, 10, 6, 10); //window toolkit
             cp.add(button, c);
         }
 
