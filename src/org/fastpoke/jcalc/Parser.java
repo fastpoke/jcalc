@@ -16,13 +16,13 @@ public class Parser {
 
     public static double parse(String expression) throws ParserException {
         try {
-            return expr(new StringReader(expression));
+            return parse(new StringReader(expression));
         } catch (IOException e) {
             throw new AssertionError("wtf? io exception from string reader", e);
         }
     }
 
-    public static double expr(Reader in) throws IOException, ParserException {
+    public static double parse(Reader in) throws IOException, ParserException {
         return expr(in, Collections.singleton(-1));
     }
 
@@ -96,6 +96,8 @@ public class Parser {
             throw new PrematureEndOfFileException();
         } else if (isDigit(c)) {
             return number(in, terminators);
+        } else if (c == '(') {
+            return parentheses(in);
         } else if (isFunctionNameCharacter(c)) {
             return function(in);
         } else {
@@ -117,6 +119,18 @@ public class Parser {
             r = r * 10 + (Character.digit(c, 10));
         }
         return r;
+    }
+
+    static double parentheses(Reader in) throws IOException, ParserException {
+        int c = read(in);
+        if (c != '(') {
+            throw new UnexpectedSymbolException(c);
+        }
+        double result = expr(in, Collections.singleton((int) ')'));
+        if (read(in) != ')') {
+            throw new UnexpectedSymbolException(c);
+        }
+        return result;
     }
 
     static double function(Reader in) throws ParserException, IOException {
