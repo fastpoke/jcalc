@@ -62,4 +62,14 @@ public class ParserTest {
         parse("2+");
     }
 
+    @Test(expectedExceptions = UnexpectedSymbolException.class)
+    public void nothingPlusTwo() throws IOException, ParserException {
+        parse("+2");
+    }
+
+    @Test(expectedExceptions = UnknownFunctionException.class)
+    public void unknownFunction() throws IOException, ParserException {
+        parse("desu(2, 2)");
+    }
+
 }

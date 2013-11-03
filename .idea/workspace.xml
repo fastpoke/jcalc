@@ -4,7 +4,6 @@
     <list default="true" id="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java" afterPath="$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java" afterPath="$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jcalc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,11 +13,14 @@
     <file path="/MainWindow.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383490209209" ignored="false" />
     <file path="/Data.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383490421560" ignored="false" />
     <file path="/a.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383203168401" ignored="false" />
-    <file path="/Parser.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383499321159" ignored="false" />
+    <file path="/Parser.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383500494814" ignored="false" />
     <file path="/ParserException.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383493212572" ignored="false" />
-    <file path="/ParserTest.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383499510878" ignored="false" />
+    <file path="/ParserTest.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383500511400" ignored="false" />
     <file path="/CharMinusOne.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383498186707" ignored="false" />
     <file path="/PrematureEndOfFileException.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383499275599" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383500540089" ignored="false" />
+    <file path="/UnknownFunctionException.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383499712555" ignored="false" />
+    <file path="/UnexpectedSymbolException.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383500480589" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,10 +81,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Parser.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Parser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="12" selection-start="2537" selection-end="2537" vertical-scroll-proportion="0.0">
+            <state line="63" column="8" selection-start="1913" selection-end="1913" vertical-scroll-proportion="0.8956522">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,10 +92,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParserTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ParserTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="9" selection-start="1719" selection-end="1719" vertical-scroll-proportion="0.79130435">
+            <state line="64" column="62" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,6 +127,8 @@
         <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/ParserException.java" />
         <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/CharMinusOne.java" />
         <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/PrematureEndOfFileException.java" />
+        <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/UnknownFunctionException.java" />
+        <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/UnexpectedSymbolException.java" />
         <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java" />
         <option value="$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java" />
       </list>
@@ -352,7 +356,7 @@
       <recent name="org.fastpoke.jcalc" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ParserTest.twoPlusNothing">
+  <component name="RunManager" selected="TestNG.ParserTest">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.fastpoke.jcalc.Main" />
       <option name="VM_PARAMETERS" value="" />
@@ -588,9 +592,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.ParserTest.twoPlusNothing" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.ParserTest.empty" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.ParserTest" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.ParserTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.ParserTest.twoPlusNothing" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.ParserTest.empty" />
         <item index="3" class="java.lang.String" itemvalue="TestNG.ParserTest.sqrtOfFour" />
         <item index="4" class="java.lang.String" itemvalue="Application.Main" />
       </list>
@@ -742,30 +746,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="16" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1255#1713#0" expanded="true" />
-            <element signature="e#1408#1687#0" expanded="true" />
-            <element signature="e#1668#1669#0" expanded="true" />
-            <element signature="e#1702#1703#0" expanded="true" />
-            <element signature="e#2070#2304#0" expanded="true" />
-            <element signature="e#2289#2290#0" expanded="true" />
-            <element signature="e#2560#2745#0" expanded="true" />
-            <element signature="e#2734#2735#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="59" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java/src.zip!/java/util/concurrent/Callable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="17" selection-start="2283" selection-end="2283" vertical-scroll-proportion="0.59380376" />
@@ -851,25 +831,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/PrematureEndOfFileException.java">
+    <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/UnknownFunctionException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="36" selection-start="175" selection-end="175" vertical-scroll-proportion="0.16">
+        <state line="4" column="49" selection-start="201" selection-end="201" vertical-scroll-proportion="0.104347825">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java">
+    <entry file="file://$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="12" selection-start="2537" selection-end="2537" vertical-scroll-proportion="0.0">
+        <state line="64" column="62" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/UnexpectedSymbolException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="9" selection-start="1719" selection-end="1719" vertical-scroll-proportion="0.79130435">
+        <state line="4" column="46" selection-start="186" selection-end="186" vertical-scroll-proportion="0.104347825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/PrematureEndOfFileException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="11" selection-start="107" selection-end="107" vertical-scroll-proportion="0.07826087">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="8" selection-start="1913" selection-end="1913" vertical-scroll-proportion="0.8956522">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

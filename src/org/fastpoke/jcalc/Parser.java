@@ -31,6 +31,10 @@ public class Parser {
         return c >= '0' && c <= '9';
     }
 
+    private static boolean isFunctionNameCharacter(int c) {
+        return c >= 'a' && c <= 'z';
+    }
+
     static double expr(Reader in, Set<Integer> terminators) throws ParserException, IOException {
         Set<Integer> termTerminators = new HashSet<>(terminators);     //generics
         termTerminators.add((int) '+');
@@ -83,8 +87,10 @@ public class Parser {
             throw new PrematureEndOfFileException();
         } else if (isDigit(c)) {
             return number(in, terminators);
-        } else {
+        } else if (isFunctionNameCharacter(c)) {
             return function(in);
+        } else {
+            throw new UnexpectedSymbolException(c);
         }
     }
 
@@ -105,17 +111,17 @@ public class Parser {
     }
 
     static double function(Reader in) throws ParserException, IOException {
-        StringBuilder name = new StringBuilder();
+        StringBuilder nameAccumulator = new StringBuilder();
         int c;
         while (true) {
             c = read(in);
             if (c == '(') {
                 break;
             }
-            if (c < 'a' || c > 'z') {
+            if (!isFunctionNameCharacter(c)) {
                 throw new ParserException("unexpected symbol in function name: " + (char) c);
             }
-            name.append((char) c);
+            nameAccumulator.append((char) c);
         }
         List<Double> args = new ArrayList<>();
         //dirty hack >_<!
@@ -124,11 +130,12 @@ public class Parser {
             args.add(expr(in, terminators));
             c = read(in);
         } while (c == ',');
-        switch (name.toString()) {
+        String name = nameAccumulator.toString();
+        switch (name) {
             case "sqrt":
                 return Math.sqrt(args.get(0));
             default:
-                throw new ParserException("unknown function: " + name);
+                throw new UnknownFunctionException(name);
         }
     }
 
