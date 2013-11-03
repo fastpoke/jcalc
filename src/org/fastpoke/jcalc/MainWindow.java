@@ -19,9 +19,22 @@ public class MainWindow extends JFrame {
         c.anchor = GridBagConstraints.CENTER;
         c.fill = GridBagConstraints.HORIZONTAL;
         c.weightx = c.weighty = 1.0;
-        //c.gridx = c.gridy = 2;
 
+        addTextField(data, cp, c);
 
+        c.gridwidth = 1;
+        c.insets = new Insets(6, 10, 6, 10); //window toolkit
+
+        addDigitButtons(data, cp, c);
+
+        addClearButton(data, cp, c);
+
+        pack();
+    }
+
+//methods
+
+    private void addTextField(final Data data, Container cp, GridBagConstraints c) {
         final JTextField textField = new JTextField();
         textField.setEditable(false);
         textField.setBackground(Color.white);
@@ -41,33 +54,38 @@ public class MainWindow extends JFrame {
                 });
             }
         });
-        c.gridwidth = 1;
+    }
 
-        for(int i = 1; i <= 10; i++) {
+    private void addDigitButtons(final Data data, Container cp, GridBagConstraints c) {
+        for(int i = 0; i <= 9; i++) {
             c.gridx = (i - 1) % 3;
             c.gridy = 4 - ((i + 2) / 3) % 4;
 
-            String num = String.valueOf(i % 10);
-            JButton button = new JButton(num);
-            button.setBackground(Color.white);
-            button.setForeground(Color.black);
-            button.setSize(20, 20);
+            final int digit = i % 10;
+            JButton button = new JButton(String.valueOf(digit));
             button.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    log("button clicked");
-                    data.increment();
-                    /*
-                    data.notifyAll();
-                    data.fireUpdateEvent();
-                    */
+                    log("button clicked: " + digit);
+                    data.append(digit);
                 }
             });
-            c.insets = new Insets(6, 10, 6, 10); //window toolkit
             cp.add(button, c);
         }
+    }
 
-        pack();
+    private void addClearButton(final Data data, Container cp, GridBagConstraints c) {
+        JButton button = new JButton("C");
+        c.gridx = 1;
+        c.gridy = 4;
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                log("clear");
+                data.clear();
+            }
+        });
+        cp.add(button, c);
     }
 
 }

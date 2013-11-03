@@ -13,7 +13,7 @@ public class Main {
             public void run() {
                 log("creating wndow");
                 MainWindow mainWindow = new MainWindow(data);
-                data.fireUpdateEvent();
+                data.clear();
                 mainWindow.setVisible(true);
             }
         });

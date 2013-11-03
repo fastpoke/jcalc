@@ -9,9 +9,9 @@ import static org.fastpoke.jcalc.Main.log;
 
 public class Data {
 
-    private final AtomicInteger value = new AtomicInteger();
-
     private final ExecutorService executorService;
+
+    private volatile int value;
 
     private final List<Runnable> listeners = new CopyOnWriteArrayList<>();
 
@@ -21,7 +21,7 @@ public class Data {
 
     public int getValue() {
         log("getValue");
-        return value.get();
+        return value;
     }
 
     public void addListener(Runnable listener) {
@@ -29,13 +29,19 @@ public class Data {
         listeners.add(listener);
     }
 
-    public void increment() {
-        log("inc");
-        value.incrementAndGet();
+    public synchronized void append(int digit) {
+        log("appending " + digit);
+        value = value * 10 + digit;
         fireUpdateEvent();
     }
 
-    public void fireUpdateEvent() {
+    public synchronized void clear() {
+        log("clear");
+        value = 0;
+        fireUpdateEvent();
+    }
+
+    private void fireUpdateEvent() {
         log("fire");
         for (Runnable listener : listeners) {
             executorService.execute(listener);
