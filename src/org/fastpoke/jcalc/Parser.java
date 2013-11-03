@@ -7,11 +7,11 @@ import java.io.StringReader;
 import java.util.*;
 
 /*
-> expr = term *(("+" | "-") term)
+expr = term *(("+" | "-") term)
 term = [-] mult *(("*"|"/") mult)
 mult = number | "(" expr ")" | function
-> function = fname "(" expr *( "," expr ) ")"
- */
+function = fname "(" expr *( "," expr ) ")"
+*/
 public class Parser {
 
     public static double parse(String expression) throws ParserException {
@@ -65,11 +65,21 @@ public class Parser {
     }
 
     static double term(Reader in, Set<Integer> terminators) throws ParserException, IOException {
+        boolean negative = false;
+        if (read(in) == '-') {
+            negative = true;
+        } else {
+            in.reset(); //return to mark
+        }
+
         Set<Integer> multTerminators = new HashSet<>(terminators);
         multTerminators.add((int) '*');
         multTerminators.add((int) '/');
 
         double result = mult(in, multTerminators);
+        if (negative) {
+            result = -result;
+        }
         while (true) {
             int c = read(in);
             if (terminators.contains(c)) {

@@ -68,4 +68,9 @@ public class ParserTest {
     public void closingParenthesis() throws ParserException {
         Parser.parse(")desu");
     }
+
+    @Test
+    public void negative() throws ParserException {
+        assertEquals(Parser.parse("-1"), -1.0, EPSILON);
+    }
 }
