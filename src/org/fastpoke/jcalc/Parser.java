@@ -3,15 +3,24 @@ package org.fastpoke.jcalc;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.io.StringReader;
 import java.util.*;
 
 /*
-expr = term *(("+" | "-") term)
+> expr = term *(("+" | "-") term)
 term = [-] mult *(("*"|"/") mult)
 mult = number | "(" expr ")" | function
-function = fname "(" expr *( "," expr ) ")"
+> function = fname "(" expr *( "," expr ) ")"
  */
 public class Parser {
+
+    public static double parse(String expression) throws ParserException {
+        try {
+            return expr(new StringReader(expression));
+        } catch (IOException e) {
+            throw new AssertionError("wtf? io exception from string reader", e);
+        }
+    }
 
     public static double expr(Reader in) throws IOException, ParserException {
         return expr(in, Collections.singleton(-1));
@@ -124,7 +133,6 @@ public class Parser {
             nameAccumulator.append((char) c);
         }
         List<Double> args = new ArrayList<>();
-        //dirty hack >_<!
         Set<Integer> terminators = new HashSet<>(Arrays.asList((int) ',', (int) ')'));
         do {
             args.add(expr(in, terminators));
