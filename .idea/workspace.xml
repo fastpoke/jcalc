@@ -2,20 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jcalc.iml" afterPath="$PROJECT_DIR$/jcalc.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java" afterPath="$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java" afterPath="$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java" />
     </list>
     <ignored path="jcalc.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383486408839" ignored="false" />
     <file path="/Main.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383489154528" ignored="false" />
-    <file path="/fragment.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383495279737" ignored="false" />
+    <file path="/fragment.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383498969260" ignored="false" />
     <file path="/MainWindow.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383490209209" ignored="false" />
     <file path="/Data.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383490421560" ignored="false" />
     <file path="/a.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383203168401" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383496634635" ignored="false" />
-    <file path="/Parser.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383496424216" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383499007340" ignored="false" />
+    <file path="/Parser.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383498886131" ignored="false" />
     <file path="/ParserException.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383493212572" ignored="false" />
-    <file path="/ParserTest.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383496506343" ignored="false" />
+    <file path="/ParserTest.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383498924767" ignored="false" />
+    <file path="/CharMinusOne.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383498186707" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,10 +78,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Parser.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Parser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="54" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.0">
+            <state line="129" column="71" selection-start="4056" selection-end="4056" vertical-scroll-proportion="0.8173913">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParserTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ParserTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="36" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.73913044">
+            <state line="50" column="40" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,6 +122,7 @@
         <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/Data.java" />
         <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/ParserException.java" />
+        <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/CharMinusOne.java" />
         <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java" />
         <option value="$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java" />
       </list>
@@ -128,6 +131,94 @@
   <component name="ProjectFrameBounds">
     <option name="width" value="1366" />
     <option name="height" value="738" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Class metrics</id>
+          </State>
+          <State>
+            <id>Control FlowGroovy</id>
+          </State>
+          <State>
+            <id>Control flow issues</id>
+          </State>
+          <State>
+            <id>Dependency issues</id>
+          </State>
+          <State>
+            <id>Error handling</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>J2ME issues</id>
+          </State>
+          <State>
+            <id>Java language level issues</id>
+          </State>
+          <State>
+            <id>Java language level migration aids</id>
+          </State>
+          <State>
+            <id>Method MetricsGroovy</id>
+          </State>
+          <State>
+            <id>Method metrics</id>
+          </State>
+          <State>
+            <id>Modularization issues</id>
+          </State>
+          <State>
+            <id>Naming conventions</id>
+          </State>
+          <State>
+            <id>Numeric issues</id>
+          </State>
+          <State>
+            <id>Packaging issues</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsGroovy</id>
+          </State>
+          <State>
+            <id>Probable bugs</id>
+          </State>
+          <State>
+            <id>Security issues</id>
+          </State>
+          <State>
+            <id>Threading issues</id>
+          </State>
+          <State>
+            <id>Threading issuesGroovy</id>
+          </State>
+          <State>
+            <id>Visibility issues</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -243,7 +334,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="preferences.intentionPowerPack" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
@@ -282,22 +373,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="Parser" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="org.fastpoke.jcalc.Parser" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="jcalc" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="ParserTest" type="TestNG" factoryName="TestNG" temporary="true">
       <module name="jcalc" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -308,6 +383,35 @@
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ParserTest.sqrtOfFour" type="TestNG" factoryName="TestNG" temporary="true">
+      <module name="jcalc" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="org.fastpoke.jcalc" />
+      <option name="MAIN_CLASS_NAME" value="org.fastpoke.jcalc.ParserTest" />
+      <option name="METHOD_NAME" value="sqrtOfFour" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -417,13 +521,13 @@
     </configuration>
     <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Parser" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.ParserTest" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.ParserTest" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.ParserTest.sqrtOfFour" />
     </list>
     <recent_temporary>
       <list size="3">
         <item index="0" class="java.lang.String" itemvalue="TestNG.ParserTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Parser" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.ParserTest.sqrtOfFour" />
         <item index="2" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -496,7 +600,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32669982" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32666665" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.67164177" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -574,15 +678,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="34" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="16" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.0">
@@ -692,18 +787,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java">
+    <entry file="file://$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="54" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.0">
+        <state line="50" column="40" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="36" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.73913044">
+        <state line="129" column="71" selection-start="4056" selection-end="4056" vertical-scroll-proportion="0.8173913">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

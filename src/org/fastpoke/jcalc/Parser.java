@@ -3,9 +3,7 @@ package org.fastpoke.jcalc;
 
 import java.io.IOException;
 import java.io.Reader;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /*
 expr = term *(("+" | "-") term)
@@ -28,7 +26,11 @@ public class Parser {
             }
         }
     }
-    
+
+    private static boolean isDigit(int c) {
+        return c >= '0' && c <= '9';
+    }
+
     static double expr(Reader in, Set<Integer> terminators) throws ParserException, IOException {
         Set<Integer> termTerminators = new HashSet<>(terminators);     //generics
         termTerminators.add((int) '+');
@@ -54,7 +56,7 @@ public class Parser {
         multTerminators.add((int) '*');
         multTerminators.add((int) '/');
 
-        double result = number(in, multTerminators);
+        double result = mult(in, multTerminators);
         while (true) {
             int c = read(in);
             if (terminators.contains(c)) {
@@ -64,7 +66,7 @@ public class Parser {
             if (c != '*' && c != '/') {
                 throw new ParserException("unexpected term-level operation: " + (char) c);
             }
-            double multValue = number(in, multTerminators);
+            double multValue = mult(in, multTerminators);
             if (c == '*') {
                 result = result * multValue;
             } else {
@@ -72,6 +74,16 @@ public class Parser {
             }
         }
         return result;
+    }
+
+    static double mult(Reader in, Set<Integer> terminators) throws ParserException, IOException {
+        int c = read(in);
+        in.reset();
+        if (isDigit(c)) {
+            return number(in, terminators);
+        } else {
+            return function(in);
+        }
     }
 
     static double number(Reader in, Set<Integer> terminators) throws IOException, ParserException {
@@ -82,12 +94,40 @@ public class Parser {
                 in.reset();
                 break;
             }
-            if (c < '0' || c > '9') {
+            if (!isDigit(c)) {
                 throw new ParserException("unexpected digit: " + (char) c);
             }
             r = r * 10 + (Character.digit(c, 10));
         }
         return r;
+    }
+
+    static double function(Reader in) throws ParserException, IOException {
+        StringBuilder name = new StringBuilder();
+        int c;
+        while (true) {
+            c = read(in);
+            if (c == '(') {
+                break;
+            }
+            if (c < 'a' || c > 'z') {
+                throw new ParserException("unexpected symbol in function name: " + (char) c);
+            }
+            name.append((char) c);
+        }
+        List<Double> args = new ArrayList<>();
+        //dirty hack >_<!
+        Set<Integer> terminators = new HashSet<>(Arrays.asList((int) ',', (int) ')'));
+        do {
+            args.add(expr(in, terminators));
+            c = read(in);
+        } while (c == ',');
+        switch (name.toString()) {
+            case "sqrt":
+                return Math.sqrt(args.get(0));
+            default:
+                throw new ParserException("unknown function: " + name);
+        }
     }
 
 }

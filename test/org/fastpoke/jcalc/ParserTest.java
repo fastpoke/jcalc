@@ -46,4 +46,9 @@ public class ParserTest {
         assertEquals(parse("2/2"), 1.0, EPSILON);
     }
 
+    @Test
+    public void sqrtOfFour() throws IOException, ParserException {
+        assertEquals(parse("sqrt(4)"), 2.0, EPSILON);
+    }
+
 }
