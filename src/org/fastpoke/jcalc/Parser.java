@@ -79,7 +79,9 @@ public class Parser {
     static double mult(Reader in, Set<Integer> terminators) throws ParserException, IOException {
         int c = read(in);
         in.reset();
-        if (isDigit(c)) {
+        if (c == -1) {
+            throw new PrematureEndOfFileException();
+        } else if (isDigit(c)) {
             return number(in, terminators);
         } else {
             return function(in);

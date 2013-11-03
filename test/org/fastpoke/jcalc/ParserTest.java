@@ -51,4 +51,15 @@ public class ParserTest {
         assertEquals(parse("sqrt(4)"), 2.0, EPSILON);
     }
 
+//WOW SUCH TDD
+    @Test(expectedExceptions = PrematureEndOfFileException.class)
+    public void empty() throws IOException, ParserException {
+        parse("");
+    }
+
+    @Test(expectedExceptions = PrematureEndOfFileException.class)
+    public void twoPlusNothing() throws IOException, ParserException {
+        parse("2+");
+    }
+
 }
