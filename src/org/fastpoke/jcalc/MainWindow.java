@@ -72,6 +72,7 @@ public class MainWindow extends JFrame {
         final JLabel description = new JLabel(
                 "<html>Welcome to jCalc!<br/>" +
                         "<ul>" +
+                        "<li>DESU DESU DESU DESU~</li>" +
                         "<li>sqrt(a) - square root of a</li>" +
                         "<li>pow(a, b) - raise a to power b</li>" +
                         "</ul>" +
