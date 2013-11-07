@@ -173,9 +173,31 @@ public class Parser {
         String name = nameAccumulator.toString();
         switch (name) {
             case "sqrt":
+                checkArgumentCount(args, 1, "sqrt");
                 return Math.sqrt(args.get(0));
+            case "pow":
+                checkArgumentCount(args, 2, "pow");
+                return Math.pow(args.get(0), args.get(1));
+            case "log":
+                checkArgumentCount(args, 2, "log");
+                return Math.log(args.get(1)) / Math.log(args.get(0));
+            case "lg":
+                checkArgumentCount(args, 1, "lg");
+                return Math.log10(args.get(0));
+            case "ln":
+                checkArgumentCount(args, 1, "ln");
+                return Math.log(args.get(0));
             default:
                 throw new UnknownFunctionException(name);
+        }
+    }
+
+    private static void checkArgumentCount(List<Double> args, int expectedCount, String functionName) throws ParserException {
+        if (args.size() != expectedCount) {
+            throw new ParserException(
+                    functionName + " must have " +
+                            expectedCount + " argument" + (expectedCount == 1 ? "" : "s")
+            );
         }
     }
 
