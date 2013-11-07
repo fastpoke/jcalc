@@ -11,13 +11,13 @@ public class MainWindow extends JFrame {
 
     public MainWindow(final Data data) {
         super("jCalc v0.1.1");
-        setResizable(false);
+        setResizable(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         Container cp = getContentPane();
         cp.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         c.anchor = GridBagConstraints.CENTER;
-        c.fill = GridBagConstraints.HORIZONTAL;
+        c.fill = GridBagConstraints.BOTH;
         c.weightx = c.weighty = 1.0;
 
         addTextField(data, cp, c);
@@ -25,8 +25,8 @@ public class MainWindow extends JFrame {
         c.gridwidth = 1;
         c.insets = new Insets(6, 10, 6, 10); //window toolkit
 
-        addDigitButtons(data, cp, c);
-
+        //addDigitButtons(data, cp, c);
+        addSolveButton(data, cp, c);
         addClearButton(data, cp, c);
 
         pack();
@@ -36,7 +36,7 @@ public class MainWindow extends JFrame {
 
     private void addTextField(final Data data, Container cp, GridBagConstraints c) {
         final JTextField textField = new JTextField();
-        textField.setEditable(false);
+        //textField.setEditable(false);
         textField.setBackground(Color.white);
         c.insets = new Insets(16, 10, 8, 10);
         c.gridwidth = 18;
@@ -56,6 +56,7 @@ public class MainWindow extends JFrame {
         });
     }
 
+    /*
     private void addDigitButtons(final Data data, Container cp, GridBagConstraints c) {
         for(int i = 0; i <= 9; i++) {
             c.gridx = (i - 1) % 3;
@@ -73,11 +74,27 @@ public class MainWindow extends JFrame {
             cp.add(button, c);
         }
     }
+    */
+
+    private void addSolveButton(final Data data, Container cp, GridBagConstraints c) {
+        JButton button = new JButton("Honk!");
+        c.gridx = 1;
+        c.gridy = 3;
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                log("Honk!");
+                data.append(0);
+            }
+        });
+        cp.add(button, c);
+    }
+
 
     private void addClearButton(final Data data, Container cp, GridBagConstraints c) {
-        JButton button = new JButton("C");
-        c.gridx = 1;
-        c.gridy = 4;
+        JButton button = new JButton("Clear");
+        c.gridx = 2;
+        c.gridy = 3;
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
