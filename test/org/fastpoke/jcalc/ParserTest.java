@@ -43,6 +43,21 @@ public class ParserTest {
         assertEquals(Parser.parse("sqrt(4)"), 2.0, EPSILON);
     }
 
+    @Test
+    public void firstDot() throws ParserException {
+        assertEquals(Parser.parse("1 + 1.1"), 2.1, EPSILON);
+    }
+
+    @Test
+    public void secondDot() throws ParserException {
+        assertEquals(Parser.parse("1 - 3.1"), -2.1, EPSILON);
+    }
+
+    @Test
+    public void thirdChildIsReiAyanami() throws ParserException {
+        assertEquals(Parser.parse("1.1 * 1"), 1.1, EPSILON);
+    }
+
 //WOW SUCH TDD
     @Test(expectedExceptions = PrematureEndOfFileException.class)
     public void empty() throws ParserException {
@@ -58,6 +73,7 @@ public class ParserTest {
     public void nothingPlusTwo() throws ParserException {
         Parser.parse("+2");
     }
+
 
     @Test(expectedExceptions = UnknownFunctionException.class)
     public void unknownFunction() throws ParserException {
