@@ -116,19 +116,27 @@ public class Parser {
     }
 
     static double number(Reader in, Set<Integer> terminators) throws IOException, ParserException {
-        double r = 0;
+        StringBuilder buffer = new StringBuilder();
+        boolean seenDot = false;
         while (true) {
             int c = read(in);
             if (terminators.contains(c)) {
                 in.reset();
                 break;
             }
-            if (!isDigit(c)) {
+            if (isDigit(c)) {
+                buffer.append((char) c);
+            } else if (c == '.') {
+                if (seenDot) {
+                    throw new ParserException("second dot in a number");
+                }
+                buffer.append('.');
+                seenDot = true;
+            } else {
                 throw new ParserException("unexpected digit: " + (char) c);
             }
-            r = r * 10 + (Character.digit(c, 10));
         }
-        return r;
+        return Double.parseDouble(buffer.toString());
     }
 
     static double parentheses(Reader in) throws IOException, ParserException {
