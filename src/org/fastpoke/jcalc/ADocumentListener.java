@@ -6,10 +6,10 @@ import javax.swing.text.JTextComponent;
 
 public abstract class ADocumentListener implements DocumentListener {
 
-    protected final JTextComponent text;
+    protected final JTextComponent input;
 
-    public ADocumentListener(JTextComponent text) {
-        this.text = text;
+    public ADocumentListener(JTextComponent input) {
+        this.input = input;
     }
 
     @Override

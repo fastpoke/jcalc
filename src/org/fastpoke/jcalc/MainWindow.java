@@ -6,7 +6,7 @@ import java.awt.*;
 public class MainWindow extends JFrame {
 
     public MainWindow() {
-        super("jCalc v0.2.0");
+        super("jCalc v0.2.2");
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,7 +53,7 @@ public class MainWindow extends JFrame {
             protected void onUpdate() {
                 String resultString;
                 try {
-                    double value = Parser.parse(text.getText());
+                    double value = Parser.parse(input.getText());
                     if (value == (long) value) {
                         resultString = Long.toString((long) value);
                     } else {
@@ -117,21 +117,22 @@ public class MainWindow extends JFrame {
         c.weightx = 0;
         pane.add(label, c);
 
-        final JTextField field = new JTextField();
+        JTextField field = new JTextField();
+        field.setEditable(false);
         c.insets = new Insets(3, 3, 3, 12);
         c.gridx = 1;
         c.weightx = 1;
-        text.getDocument().addDocumentListener(new ADocumentListener(text) {
+        text.getDocument().addDocumentListener(new AConverterDocumentListener(text, field) {
             @Override
-            protected void onUpdate() {
-                field.setText(Long.toBinaryString(Long.parseLong(text.getText())));
+            protected String convert(long value) {
+                return Long.toBinaryString(value);
             }
         });
         pane.add(field, c);
     }
 
     private void addOctocat(JComponent pane, GridBagConstraints c, JTextField text) {
-        JLabel label = new JLabel("Octocat:");
+        JLabel label = new JLabel("Octocat:");  //cat^8
         c.insets = new Insets(3, 12, 3, 3);
         c.gridx = 0;
         c.gridy = 2;
@@ -139,13 +140,14 @@ public class MainWindow extends JFrame {
         pane.add(label, c);
 
         final JTextField field = new JTextField();
+        field.setEditable(false);
         c.insets = new Insets(3, 3, 3, 12);
         c.gridx = 1;
         c.weightx = 1;
-        text.getDocument().addDocumentListener(new ADocumentListener(text) {
+        text.getDocument().addDocumentListener(new AConverterDocumentListener(text, field) {
             @Override
-            protected void onUpdate() {
-                field.setText(Long.toOctalString(Long.parseLong(text.getText())));
+            protected String convert(long value) {
+                return Long.toOctalString(value);
             }
         });
         pane.add(field, c);
@@ -158,14 +160,16 @@ public class MainWindow extends JFrame {
         c.gridy = 3;
         c.weightx = 0;
         pane.add(label, c);
+
         final JTextField field = new JTextField();
+        field.setEditable(false);
         c.insets = new Insets(3, 3, 12, 12);
         c.gridx = 1;
         c.weightx = 1;
-        text.getDocument().addDocumentListener(new ADocumentListener(text) {
+        text.getDocument().addDocumentListener(new AConverterDocumentListener(text, field) {
             @Override
-            protected void onUpdate() {
-                field.setText(Long.toHexString(Long.parseLong(text.getText())));
+            protected String convert(long value) {
+                return Long.toHexString(value);
             }
         });
         pane.add(field, c);
