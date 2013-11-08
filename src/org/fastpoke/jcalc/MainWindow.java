@@ -6,7 +6,7 @@ import java.awt.*;
 public class MainWindow extends JFrame {
 
     public MainWindow() {
-        super("jCalc v0.3.1");
+        super("jCalc v0.3.2");
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,7 +87,7 @@ public class MainWindow extends JFrame {
                         "<tr><td>log of the number b to the base a:</td>" +
                         "<td><font face=\"Droid Sans Mono\">log(a, b)</font></td></tr>" +
                         "<tr><td>log10 from a:</td><td><font face=\"Droid Sans Mono\">lg(a)</font></td></tr>" +
-                        "<tr><td>linear log from a:</td><td><font face=\"Droid Sans Mono\">ln(a)</font></td></tr>" +
+                        "<tr><td>natural log from a:</td><td><font face=\"Droid Sans Mono\">ln(a)</font></td></tr>" +
                         "<tr><td></td><tr>" +
                         "<tr><td><b><font color=#ff0000>example:</font></b></td>" +
                         "<td><font face=\"Droid Sans Mono\">(1 + 2) / (4 - 2) * 2 = 3</font></td></tr>" +

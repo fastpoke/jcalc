@@ -9,10 +9,12 @@
     <list default="true" id="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/fastpoke/jcalc/MainWindow.java" afterPath="$PROJECT_DIR$/src/org/fastpoke/jcalc/MainWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java" afterPath="$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java" afterPath="$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jcalc.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383885144585" ignored="false" />
+    <file path="/Dummy.txt" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383927584899" ignored="false" />
     <file path="/Main.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383857032296" ignored="false" />
     <file path="/fragment.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383908961726" ignored="false" />
     <file path="/MainWindow.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383907647219" ignored="false" />
@@ -20,7 +22,7 @@
     <file path="/a.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383501954847" ignored="false" />
     <file path="/Parser.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383910703747" ignored="false" />
     <file path="/ParserException.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383501077578" ignored="false" />
-    <file path="/ParserTest.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383887288816" ignored="false" />
+    <file path="/ParserTest.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383927799207" ignored="false" />
     <file path="/CharMinusOne.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383498186707" ignored="false" />
     <file path="/PrematureEndOfFileException.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383499275599" ignored="false" />
     <file path="/UnknownFunctionException.java" changelist="ad9f4ae0-8c9c-420a-b3fe-5b51cacb91c1" time="1383499712555" ignored="false" />
@@ -97,21 +99,17 @@
       <file leaf-file-name="Parser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="201" column="32" selection-start="6662" selection-end="6662" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="200" column="47" selection-start="6625" selection-end="6625" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainWindow.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainWindow.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="80" selection-start="3694" selection-end="3694" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="8" column="27" selection-start="166" selection-end="166" vertical-scroll-proportion="0.3398058">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,13 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParserTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ParserTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="20" selection-start="720" selection-end="720" vertical-scroll-proportion="0.7785467">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="62" column="45" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,9 +160,9 @@
         <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/ADocumentListener.java" />
         <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/AConverterDocumentListener.java" />
         <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/Main.java" />
-        <option value="$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java" />
         <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java" />
         <option value="$PROJECT_DIR$/src/org/fastpoke/jcalc/MainWindow.java" />
+        <option value="$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java" />
       </list>
     </option>
   </component>
@@ -722,12 +718,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-3" width="1366" height="741" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3548922" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39800996" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -739,10 +734,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21558245" sideWeight="0.5538972" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44610283" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44610283" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -849,9 +845,7 @@
     </entry>
     <entry file="jar:///usr/lib/jvm/java/src.zip!/java/lang/Runnable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="25" selection-start="3011" selection-end="3011" vertical-scroll-proportion="0.68421054">
-          <folding />
-        </state>
+        <state line="67" column="25" selection-start="3011" selection-end="3011" vertical-scroll-proportion="0.68421054" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/ADocumentListener.java">
@@ -877,16 +871,12 @@
     </entry>
     <entry file="jar:///usr/lib/jvm/java/src.zip!/java/awt/EventDispatchThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="0" selection-start="3191" selection-end="3191" vertical-scroll-proportion="0.331565">
-          <folding />
-        </state>
+        <state line="90" column="0" selection-start="3191" selection-end="3191" vertical-scroll-proportion="0.331565" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="35" selection-start="34" selection-end="57" vertical-scroll-proportion="0.025951557">
-          <folding />
-        </state>
+        <state line="1" column="35" selection-start="34" selection-end="57" vertical-scroll-proportion="0.025951557" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/AConverterDocumentListener.java">
@@ -896,30 +886,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="45" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="201" column="32" selection-start="6662" selection-end="6662" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="200" column="47" selection-start="6625" selection-end="6625" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/fastpoke/jcalc/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="80" selection-start="3694" selection-end="3694" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/fastpoke/jcalc/ParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="20" selection-start="720" selection-end="720" vertical-scroll-proportion="0.7785467">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="8" column="27" selection-start="166" selection-end="166" vertical-scroll-proportion="0.3398058">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -48,6 +48,21 @@ public class ParserTest {
         assertEquals(Parser.parse("pow(2, 4)"), 16.0, EPSILON);
     }
 
+   @Test
+    public void sin() throws ParserException {
+        assertEquals(Parser.parse("sin(0)"), 0.0, EPSILON);
+    }
+
+   @Test
+    public void cos() throws ParserException {
+        assertEquals(Parser.parse("cos(0)"), 1.0, EPSILON);
+    }
+
+   @Test
+    public void tg() throws ParserException {
+        assertEquals(Parser.parse("tg(0)"), 0.0, EPSILON);
+    }
+
     @Test
     public void firstDot() throws ParserException {
         assertEquals(Parser.parse("1 + 1.1"), 2.1, EPSILON);
