@@ -6,7 +6,7 @@ import java.awt.*;
 public class MainWindow extends JFrame {
 
     public MainWindow() {
-        super("jCalc v0.2.2");
+        super("jCalc v0.3.0");
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,13 +70,29 @@ public class MainWindow extends JFrame {
 
     private void addDescription(Container cp, GridBagConstraints c) {
         final JLabel description = new JLabel(
-                "<html>Welcome to jCalc!<br/>" +
-                        "<ul>" +
-                        "<li>DESU DESU DESU DESU~</li>" +
-                        "<li>sqrt(a) - square root of a</li>" +
-                        "<li>pow(a, b) - raise a to power b</li>" +
-                        "</ul>" +
-                        "Are you enjoying your time of JCALC?</html>"
+                "<html>" +
+                        "<b>Welcome to jCalc (line-parse calculator)~</b><br/>" +
+                        "<table>" +
+                        "<tr><td><font color=#ff0000><b>Functions:</b></font></tr></td>" +
+                        "<tr><td>addition:</td><td><font face=\"Droid Sans Mono\">(a + b)</font></td></tr>" +
+                        "<tr><td>subtraction:</td><td><font face=\"Droid Sans Mono\">(a - b)</font></td></tr>" +
+                        "<tr><td>multiplication:</td><td><font face=\"Droid Sans Mono\">(a * b)</font></td></tr>" +
+                        "<tr><td>division:</td><td><font face=\"Droid Sans Mono\">(a / b)</font></td></tr>" +
+                        "<tr><td>division with remainder:</td><td><font face=\"Droid Sans Mono\">(a % b)</font></td></tr>" +
+                        "<tr><td>square root of a:</td><td><font face=\"Droid Sans Mono\">sqrt(a)</font></td></tr>" +
+                        "<tr><td>raise a to power b:</td><td><font face=\"Droid Sans Mono\">pow(a, b)</font></td></tr>" +
+                        "<tr><td>log of the number b to the base a:</td><td><font face=\"Droid Sans Mono\">log(a, b)</font></td></tr>" +
+                        "<tr><td>log10 from a:</td><td><font face=\"Droid Sans Mono\">lg(a)</font></td></tr>" +
+                        "<tr><td>linear log from a:</td><td><font face=\"Droid Sans Mono\">ln(a)</font></td></tr>" +
+                        "<tr><td></td><tr>" +
+                        "<tr><td><b><font color=#ff0000>example:</font></b></td>" +
+                            "<td><font face=\"Droid Sans Mono\">(1 + 2) / (4 - 2) * 2 = 3</font></td></tr>" +
+                        "<tr><td><b><font color=#ff0000>nested operations:</font></b></td>" +
+                            "<td><font face=\"Droid Sans Mono\">log(3, (((4 + 2) / (2 +1)) * 4 + 1 )) = 2</font></td></tr>" +
+                        "</table>" +
+                        "<br/>" +
+                        "<i><font size=3><center>Are you enjoying the time of jCalc?</center></font></i>" +
+                "</html>"
         );
         c.insets = new Insets(3, 12, 12, 12);
         c.weighty = 0;

@@ -44,6 +44,11 @@ public class ParserTest {
     }
 
     @Test
+    public void powTwoFour() throws ParserException {
+        assertEquals(Parser.parse("pow(2, 4)"), 16.0, EPSILON);
+    }
+
+    @Test
     public void firstDot() throws ParserException {
         assertEquals(Parser.parse("1 + 1.1"), 2.1, EPSILON);
     }
@@ -55,7 +60,12 @@ public class ParserTest {
 
     @Test
     public void thirdChildIsReiAyanami() throws ParserException {
-        assertEquals(Parser.parse("1.1 * 1"), 1.1, EPSILON);
+        assertEquals(Parser.parse("1.1 * 2"), 2.2, EPSILON);
+    }
+
+    @Test
+    public void divisionWithRemainder() throws ParserException {
+        assertEquals(Parser.parse("12 % 10"), 2.0, EPSILON);
     }
 
 //WOW SUCH TDD

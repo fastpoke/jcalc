@@ -12,6 +12,7 @@ term = [-] mult *(("*"|"/") mult)
 mult = number | "(" expr ")" | function
 function = fname "(" expr *( "," expr ) ")"
 */
+
 public class Parser {
 
     public static double parse(String expression) throws ParserException {
@@ -75,6 +76,7 @@ public class Parser {
         Set<Integer> multTerminators = new HashSet<>(terminators);
         multTerminators.add((int) '*');
         multTerminators.add((int) '/');
+        multTerminators.add((int) '%');
 
         double result = mult(in, multTerminators);
         if (negative) {
@@ -86,14 +88,16 @@ public class Parser {
                 in.reset();
                 break;
             }
-            if (c != '*' && c != '/') {
+            if (c != '*' && c != '/' && c != '%') {
                 throw new ParserException("unexpected term-level operation: " + (char) c);
             }
             double multValue = mult(in, multTerminators);
             if (c == '*') {
                 result = result * multValue;
-            } else {
+            } else if (c == '/') {
                 result = result / multValue;
+            } else {
+                result = result % multValue;
             }
         }
         return result;
