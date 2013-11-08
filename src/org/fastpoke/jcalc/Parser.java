@@ -191,6 +191,16 @@ public class Parser {
             case "ln":
                 checkArgumentCount(args, 1, "ln");
                 return Math.log(args.get(0));
+            case "sin":
+                checkArgumentCount(args, 1, "cos");
+                return Math.sin(args.get(0));
+            case "cos":
+                checkArgumentCount(args, 1, "cos");
+                return Math.cos(args.get(0));
+            case "tg":
+                checkArgumentCount(args, 1, "cos");
+                return Math.tan(args.get(0));
+
             default:
                 throw new UnknownFunctionException(name);
         }
@@ -199,7 +209,7 @@ public class Parser {
     private static void checkArgumentCount(List<Double> args, int expectedCount, String functionName) throws ParserException {
         if (args.size() != expectedCount) {
             throw new ParserException(
-                    functionName + " must have " +
+                    "Function '" + functionName + "' must have " +
                             expectedCount + " argument" + (expectedCount == 1 ? "" : "s")
             );
         }

@@ -6,7 +6,7 @@ import java.awt.*;
 public class MainWindow extends JFrame {
 
     public MainWindow() {
-        super("jCalc v0.3.0");
+        super("jCalc v0.3.1");
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,18 +81,22 @@ public class MainWindow extends JFrame {
                         "<tr><td>division with remainder:</td><td><font face=\"Droid Sans Mono\">(a % b)</font></td></tr>" +
                         "<tr><td>square root of a:</td><td><font face=\"Droid Sans Mono\">sqrt(a)</font></td></tr>" +
                         "<tr><td>raise a to power b:</td><td><font face=\"Droid Sans Mono\">pow(a, b)</font></td></tr>" +
-                        "<tr><td>log of the number b to the base a:</td><td><font face=\"Droid Sans Mono\">log(a, b)</font></td></tr>" +
+                        "<tr><td>sin a°</td><td><font face=\"Droid Sans Mono\">sin(a)</font></td></tr>" +
+                        "<tr><td>cos a°</td><td><font face=\"Droid Sans Mono\">cos(a)</font></td></tr>" +
+                        "<tr><td>tg a°</td><td><font face=\"Droid Sans Mono\">tg(a)</font></td></tr>" +
+                        "<tr><td>log of the number b to the base a:</td>" +
+                        "<td><font face=\"Droid Sans Mono\">log(a, b)</font></td></tr>" +
                         "<tr><td>log10 from a:</td><td><font face=\"Droid Sans Mono\">lg(a)</font></td></tr>" +
                         "<tr><td>linear log from a:</td><td><font face=\"Droid Sans Mono\">ln(a)</font></td></tr>" +
                         "<tr><td></td><tr>" +
                         "<tr><td><b><font color=#ff0000>example:</font></b></td>" +
-                            "<td><font face=\"Droid Sans Mono\">(1 + 2) / (4 - 2) * 2 = 3</font></td></tr>" +
+                        "<td><font face=\"Droid Sans Mono\">(1 + 2) / (4 - 2) * 2 = 3</font></td></tr>" +
                         "<tr><td><b><font color=#ff0000>nested operations:</font></b></td>" +
-                            "<td><font face=\"Droid Sans Mono\">log(3, (((4 + 2) / (2 +1)) * 4 + 1 )) = 2</font></td></tr>" +
+                        "<td><font face=\"Droid Sans Mono\">log(3, (((4 + 2) / (2 +1)) * 4 + 1 )) = 2</font></td></tr>" +
                         "</table>" +
                         "<br/>" +
                         "<i><font size=3><center>Are you enjoying the time of jCalc?</center></font></i>" +
-                "</html>"
+                        "</html>"
         );
         c.insets = new Insets(3, 12, 12, 12);
         c.weighty = 0;
@@ -119,7 +123,6 @@ public class MainWindow extends JFrame {
     private JTextField addInput(JComponent pane, GridBagConstraints c) {
         JTextField text = new JTextField();
         c.insets = new Insets(12, 12, 3, 12);
-        //c.weighty = 1.0;
         c.gridx = c.gridy = 0;
         c.gridwidth = 2;
         pane.add(text, c);
